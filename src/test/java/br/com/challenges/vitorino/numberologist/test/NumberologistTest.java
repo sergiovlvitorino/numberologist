@@ -21,7 +21,7 @@ public class NumberologistTest extends TestCase {
 		numberologist = null;
 	}
 	
-	public void testIfStringBrasilReturnsIntSeven(){
+	public void testIfBrasilStringReturnsIntSeven(){
 		int expected = 7;
 		int actual = numberologist.execute("BRASIL");
 		assertEquals(expected, actual);
@@ -33,6 +33,12 @@ public class NumberologistTest extends TestCase {
 		birthday.set(Calendar.MONTH, 3);
 		birthday.set(Calendar.YEAR, 1500);
 		int actual = numberologist.execute(birthday);
+		assertEquals(expected, actual);
+	}
+	
+	public void testIfUSAStringReturnFive(){
+		int expected = 5;
+		int actual = numberologist.execute("USA");
 		assertEquals(expected, actual);
 	}
 
