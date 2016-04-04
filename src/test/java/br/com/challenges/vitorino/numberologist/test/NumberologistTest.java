@@ -41,5 +41,41 @@ public class NumberologistTest extends TestCase {
 		int actual = numberologist.execute("USA");
 		assertEquals(expected, actual);
 	}
+	
+	public void testIfAAIStringReturnsEleven(){
+		int expected = 11;
+		int actual = numberologist.execute("AAI");
+		assertEquals(expected, actual);
+	}
+	
+	public void testIfAAIAAIStringReturnsTwentyTwo(){
+		int expected = 22;
+		int actual = numberologist.execute("AAIAAI");
+		assertEquals(expected, actual);
+	}
+	
+	public void testIfAAIAAIAAIStringReturnsThirtyThree(){
+		int expected = 33;
+		int actual = numberologist.execute("AAIAAIAAI");
+		assertEquals(expected, actual);
+	}
+	
+	public void testIfElevenStringReturnsEleven(){
+		int expected = 11;
+		int actual = numberologist.execute("11");
+		assertEquals(expected, actual);
+	}
+	
+	public void testIfTwentyTwoStringReturnsTwentyTwo(){
+		int expected = 22;
+		int actual = numberologist.execute("22");
+		assertEquals(expected, actual);
+	}
+	
+	public void testIfThirtyThreeStringReturnsThirtyThree(){
+		int expected = 33;
+		int actual = numberologist.execute("33");
+		assertEquals(expected, actual);
+	}
 
 }
